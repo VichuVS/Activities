@@ -1,52 +1,13 @@
-package myprojects;
-public class Person {
-	static int eyes=2;
-	static int ears=2;
-	static int hands=2;
-	static int legs=2;
-	String name;
-	double height;
-	double weight;
-	String foodHabbits;
-	public Person(String name, double height, double weight, String foodHabbits) {
-		super();
-		this.name = name;
-		this.height = height;
-		this.weight = weight;
-		this.foodHabbits = foodHabbits;
-	}
-	 static void sleep() {
-		 System.out.println("will sleep all 365 days");
-		 }
-	static void eat() {
-		 System.out.println("will eat all 365 days");
-		 }	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public double getHeight() {
-		return height;
-	}
-	public void setHeight(double height) {
-		this.height = height;
-	}
-	public double getWeight() {
-		return weight;
-	}
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-	public String getFoodHabbits() {
-		return foodHabbits;
-	}
-	public void setFoodHabbits(String foodHabbits) {
-		this.foodHabbits = foodHabbits;
-	}	
-	public String toString() {
-		return "Person [name=" + name + ", height=" + height + ", weight=" + weight + ", foodHabbits=" + foodHabbits
-				+ "]";
-	}	
-}
+package activity;
+record Person(String Name, double Weight, double Height, String Foodhabbit) {
+Person() {
+this("A",62.35,75,"Non-Veg"); }
+public static void main(String ar[]) {
+Person p=new Person("A",62.3,75,"Non-Veg");
+Person p1=new Person("B",60.3,65,"Veg");
+Person p2=new Person("C",55.5,55,"Veg");
+Person p3=new Person("D",66.5,85,"Non-Veg");
+System.out.println(p);
+System.out.println(p1);
+System.out.println(p2);
+System.out.println(p3);}}
